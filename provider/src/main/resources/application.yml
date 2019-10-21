@@ -3,7 +3,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8800/eureka/
 server:
+  tomcat:
+    uri-encoding: UTF-8
   port: 8801
+  servlet:
+    context-path: /gbq_provider
 spring:
   application:
     name: provider
