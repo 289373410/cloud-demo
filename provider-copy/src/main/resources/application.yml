@@ -7,7 +7,7 @@ eureka:
 server:
   tomcat:
     uri-encoding: UTF-8
-  port: 9901
+  port: 9902
 #  servlet:
 #    context-path: /gbq_provider
 spring:

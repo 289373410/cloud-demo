@@ -2,14 +2,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka01:8800/eureka/,http://eureka02:8810/eureka/
-  instance:
-    prefer-ip-address:  true  #将自己的ip地址注册到Eureka服务中
 server:
   tomcat:
     uri-encoding: UTF-8
-  port: 9901
+  port: 10001
 #  servlet:
-#    context-path: /gbq_provider
+#    context-path: /gbq_consumer_ribbon
 spring:
   application:
-    name: provider
+    name: consumer_ribbon

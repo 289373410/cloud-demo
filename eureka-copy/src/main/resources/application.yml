@@ -1,14 +1,15 @@
 server:
-  port: 8800
+  port: 8810
+
 
 eureka:
   instance:
-    hostname: eureka01
+    hostname: eureka02
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:  #Eureka客户端与Eureka服务端的交互地址，高可用状态配置对方的地址，单机状态配置自己（如果不配置则默认本机8761端口）
-      defaultZone: http://eureka02:8810/eureka/
+      defaultZone: http://eureka01:8800/eureka/
   server:
     enable‐self‐preservation: true #是否开启自我保护模式
     eviction‐interval‐timer‐in‐ms: 60000 #服务注册表清理间隔（单位毫秒，默认是60*1000)
