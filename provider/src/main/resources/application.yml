@@ -8,8 +8,8 @@ server:
   tomcat:
     uri-encoding: UTF-8
   port: 9901
-#  servlet:
-#    context-path: /gbq_provider
+  servlet:
+    context-path: /gbq_provider
 spring:
   application:
     name: provider

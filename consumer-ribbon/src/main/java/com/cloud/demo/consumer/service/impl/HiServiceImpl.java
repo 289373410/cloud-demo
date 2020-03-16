@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 public class HiServiceImpl implements HiService {
 
 
-
     @Autowired
     private RestTemplate restTemplate;
 
