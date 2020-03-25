@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/,http://localhost:8810/eureka/
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 11002
+feign:
+  hystrix:
+    enabled: true
+#  servlet:
+#    context-path: /gbq_consumer
+spring:
+  main:
+    allow-bean-definition-overriding: true  #避免相同名字的Feign注册会导致重复注册
+  application:
+    name: consumer-feign-hystrix

@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka01:8800/eureka/,http://eureka02:8810/eureka/
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 11001
+#  servlet:
+#    context-path: /gbq_consumer_ribbon
+spring:
+  application:
+    name: consumer_ribbon_hystrix
+  main:
+    allow-bean-definition-overriding: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
