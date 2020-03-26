@@ -10,4 +10,4 @@ server:
 #    context-path: /gbq_consumer_ribbon
 spring:
   application:
-    name: consumer_ribbon
+    name: consumer-ribbon

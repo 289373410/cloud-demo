@@ -27,9 +27,15 @@ public class HelloController {
     }
 
     @PostMapping("/getPostUser")
-    public User getPostUser(@RequestBody User user){
-        System.err.println("2");
-        return user;
+    public User getPostUser(@RequestBody User user) throws InterruptedException {
+        if (user.getId()!=1){
+            System.err.println("2");
+            return user;
+        }else {
+            Thread.sleep(10000L);//休息10秒
+            return null;
+        }
+
     }
 
     @PostMapping("/getUser")

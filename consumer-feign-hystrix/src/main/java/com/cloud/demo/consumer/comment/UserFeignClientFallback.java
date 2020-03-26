@@ -5,10 +5,10 @@ import com.cloud.demo.consumer.rpc.GetHello;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserFeignClientFallback implements  GetHello{
+public class UserFeignClientFallback implements GetHello{
 
     @Override
     public User getPostUser(User user) {
-        return new User(1,"用户1");
+        return new User(1,"熔断用户1");
     }
 }

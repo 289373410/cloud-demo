@@ -18,9 +18,16 @@ public class HiServiceImpl implements HiService {
     @Override
     @HystrixCommand(fallbackMethod = "getDefaultUser")
     public String sayHello(String name) {
-        String url = "http://provider/hello?name="+name;
-        System.err.println(url);
-        return restTemplate.getForObject(url,String.class);
+        if(null != name){
+            String url = "http://provider/hello?name="+name;
+            System.err.println(url);
+            return restTemplate.getForObject(url,String.class);
+        }else {
+            //名字为空请求一个不存在的地址
+            String url = "http://provider/null";
+            return restTemplate.getForObject(url,String.class);
+        }
+
     }
 
     public String getDefaultUser(String name) {

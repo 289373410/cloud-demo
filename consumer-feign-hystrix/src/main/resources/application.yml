@@ -8,7 +8,7 @@ server:
   port: 11002
 feign:
   hystrix:
-    enabled: true
+    enabled: true #启用hystrix
 #  servlet:
 #    context-path: /gbq_consumer
 spring:
@@ -16,3 +16,9 @@ spring:
     allow-bean-definition-overriding: true  #避免相同名字的Feign注册会导致重复注册
   application:
     name: consumer-feign-hystrix
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
+

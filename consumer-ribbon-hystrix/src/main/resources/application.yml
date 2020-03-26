@@ -10,12 +10,12 @@ server:
 #    context-path: /gbq_consumer_ribbon
 spring:
   application:
-    name: consumer_ribbon_hystrix
+    name: consumer-ribbon-hystrix
   main:
     allow-bean-definition-overriding: true
 management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: 'hystrix.stream'
 
