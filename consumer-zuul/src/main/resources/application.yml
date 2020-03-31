@@ -1,0 +1,27 @@
+server:
+  port: 13000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:8800/eureka/,http://eureka02:8810/eureka/
+
+# 构建路由地址
+zuul:
+  routes:
+    # 这里可以自定义
+    demo1:
+      # 匹配的路由规则
+      path: /consumer-zuul-a/**
+      # 路由的目标服务名
+      serviceId: provider
+    demo2:
+      # 匹配的路由规则
+      path: /consumer-zuul-b/**
+      # 路由的目标服务名
+      serviceId: consumer-feign
+
+spring:
+  application:
+    name: consumer-zuul
+  main:
+    allow-bean-definition-overriding: true

@@ -4,8 +4,8 @@ import com.cloud.demo.consumer.bean.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "provider",path = "gbq_provider")
-//@FeignClient(name = "provider")
+//@FeignClient(name = "provider",path = "gbq_provider")
+@FeignClient(name = "provider")
 public interface GetHello {
 
     //坑一
